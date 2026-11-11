@@ -1,0 +1,12 @@
+{
+  "name": "lijox-adapter-startos",
+  "dependencies": {
+    "@start9labs/start-sdk": "3.1.1",
+    "lnd-startos": "github:Start9Labs/lnd-startos#v0.21.5-beta_1"
+  },
+  "overrides": {
+    "@start9labs/start-sdk": "$@start9labs/start-sdk",
+    "bitcoin-core-startos": "github:Start9Labs/bitcoin-core-startos#33d9536b2e1469dfca3b39ba91bdf5db8a41fec4",
+    "tor-startos": "github:Start9Labs/tor-startos#b5c5ba7ec6cfeebf76ac76db69f5e7e059d04ef5"
+  }
+}
