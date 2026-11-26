@@ -22,6 +22,7 @@ import {
   keysDir,
   lndConfPath,
   lndMount,
+  lndScbPath,
   lndTlsCertPath,
   recipePath,
   rootCaFile,
@@ -145,6 +146,7 @@ export const main = sdk.setupMain(async ({ effects }) => {
     LND_REST_CA_PATH: s.restCertificateCheck ? rootCaPath : undefined,
     LND_GRPC_ENDPOINT: grpc,
     LND_TLS_CERT_PATH: lndTlsCertPath,
+    LIJ_SCB_FILE: lndScbPath,
     LND_PEER_HOST: peerHost,
     LND_PEER_PORT: peerPortStr,
     LEASE_LNCLI: `lncli --rpcserver=${grpc} --tlscertpath=${lndTlsCertPath} --macaroonpath=${keysDir}/close.macaroon`,
@@ -285,7 +287,7 @@ export const main = sdk.setupMain(async ({ effects }) => {
             return {
               result: 'failure' as const,
               message: i18n(
-                'LND is Start9’s stock build — update LND from the LIJOX registry. New wallet channels fail until then; nothing is lost.',
+                'LND is Start9’s stock build — install LND (Terminus) from its download page. New wallet channels fail until then; nothing is lost.',
               ),
             }
           return {

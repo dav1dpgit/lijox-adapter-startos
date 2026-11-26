@@ -7,8 +7,9 @@ open channels with it, receive while offline, and keep their Black start kits wi
 
 1. **LND (Terminus)**, not Start9's stock LND. It is Start9's LND with one patch that opens the channels LIJOX wallets
    ask for (zero-conf, no anchors). It installs as an update over your LND and keeps its data, its channels and the
-   apps that use it (BTCPay, RTL …). Update LND from the LIJOX registry: Start9's own LND update puts the stock build
-   back — nothing is lost, and the "LND (Terminus)" check here turns red until you update from the LIJOX registry again.
+   apps that use it (BTCPay, RTL …). Update LND only from the LND (Terminus) download page: Start9's own LND update
+   puts the stock build back — nothing is lost, and the "LND (Terminus)" check here turns red until LND (Terminus) is
+   installed again.
 2. **Bitcoin on-chain in LND's wallet**: more than the on-chain reserve you will set, plus public channels with room to
    send out.
 3. **A way in.** LiJ is a web wallet, so this service needs a public `https://` and `wss://` address. With Cloudflare:

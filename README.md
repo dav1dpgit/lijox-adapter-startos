@@ -7,7 +7,8 @@ channels with it, receive while offline, and keep their Black start kits with it
 It runs beside **LND (Terminus)** ([lnd-startos-terminus](https://github.com/dav1dpgit/lnd-startos-terminus)):
 Start9's LND package with one patch, which opens the zero-conf channels without anchors that LIJOX wallets ask for.
 
-**Status: first release, not yet run on an operator's server.** Install it with the publisher on a call.
+**Status: running on an operator's server since 2026-11-19.** Current version: **`0.146.0:0`** (adapter
+`v0.146.0`).
 
 ## Download
 
@@ -21,6 +22,8 @@ and `SHA256SUMS` with each file's fingerprint. Check your file before installing
 
 StartOS 0.4.0.2 or later, with LND (Terminus) installed and running. StartOS → **Sideload** → the `.s9pk`. Then follow
 [instructions.md](instructions.md) (the same text StartOS shows on the service's page).
+
+To update: Sideload the newer `.s9pk` over the installed one. Settings, data and macaroons stay.
 
 ## What the package does
 

@@ -1,16 +1,15 @@
 import { VersionInfo } from '@start9labs/start-sdk'
 
-// No install of the first build (0.94.0:0, never installed anywhere) exists, so the graph starts here.
-const notes = `LIJOX Adapter, adapter release v0.119.0 (pinned by commit, hash-checked at build).
+const notes = `LIJOX Adapter, adapter release v0.146.0 (pinned by commit, hash-checked at build). Installs over 0.119.0:0; settings, data and macaroons stay.
 
-- Runs on LND (Terminus) 0.21.5-beta:1.1 or later on the same server. A health check, "LND (Terminus)", reads LND's own version line and turns red when Start9's stock LND is installed instead.
-- Settings, first step: the node name (filled in from LND's alias), the public HTTPS and WSS addresses, the Cloudflare tunnel token, and the on-chain reserve — no default; LND's on-chain balance is shown beside it.
-- New settings since v0.94.0: the second door and the relay's client address (0.108.0), several LIJOX registries (0.118.0), the smallest and largest channel, the daily low-reserve open limits, and Mix pools (off unless turned on).
-- On with nothing to set: holding wallets' Black start kits, and the /recover page.
-- Asks LND to run its watchtower server (a task: the operator picks the address).`
+- The adapter's LND macaroon is baked again by itself at the first start: v0.146.0 uses ten more LND calls (the held open's PSBT funding, GetNodeInfo, three block reads).
+- Wallets that announce it get the held open (adapter 0.124.0): a JIT channel's funding transaction is signed from LND's wallet but published only once the wallet has claimed the payment.
+- A wallet's requests can come inside its Lightning connection to this node (adapter 0.137.0 to 0.146.0); the Console's pane "Not inside Lightning" shows the ones that still came as web requests. Nothing is refused.
+- The Console's backup pane reads LND's channel backup file (read-only).
+- No new settings; every new adapter setting keeps its default.`
 
 export const current = VersionInfo.of({
-  version: '0.119.0:0',
+  version: '0.146.0:0',
   releaseNotes: {
     en_US: notes,
     es_ES: notes,
@@ -20,5 +19,6 @@ export const current = VersionInfo.of({
   },
   migrations: {
     up: async () => {},
+    down: async () => {},
   },
 })

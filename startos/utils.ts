@@ -14,6 +14,9 @@ export const rootCaPath = `${dataDir}/${rootCaFile}` as const
 export const adminMacaroonPath =
   `${lndMount}/data/chain/bitcoin/mainnet/admin.macaroon` as const
 export const lndTlsCertPath = `${lndMount}/tls.cert` as const
+// LND's channel backup file, read for the Console's backup pane (adapter 0.123.0; read-only here)
+export const lndScbPath =
+  `${lndMount}/data/chain/bitcoin/mainnet/channel.backup` as const
 export const lndConfPath = `${lndMount}/lnd.conf` as const
 export const recipePath =
   '/opt/lijox-adapter/bake-permissions-nodelegate.json' as const

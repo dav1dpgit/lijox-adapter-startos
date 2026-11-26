@@ -134,7 +134,7 @@ const dict = {
   'The adapter cannot read LND': 130,
   'LND (Terminus)': 131,
   'LND is the Terminus build: wallet channels open without anchors': 132,
-  'LND is Start9’s stock build — update LND from the LIJOX registry. New wallet channels fail until then; nothing is lost.': 133,
+  'LND is Start9’s stock build — install LND (Terminus) from its download page. New wallet channels fail until then; nothing is lost.': 133,
   'Cannot read LND’s version': 134,
   'Cloudflare tunnel': 135,
   'The tunnel is not connected': 136,

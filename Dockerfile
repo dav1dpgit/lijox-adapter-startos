@@ -4,8 +4,8 @@
 # ADAPTER_VERSION and ADAPTER_COMMIT must match the first line of adapter-release.sha256 (scripts/pin-adapter.sh writes
 # the list and the line); the build stops when any file at the commit differs from the list. The commit is fetched, not
 # a tag: a tag can be moved.
-ARG ADAPTER_VERSION=v0.119.0
-ARG ADAPTER_COMMIT=d7a520565e54b85688a42a2742b0e6867e7a1ca3
+ARG ADAPTER_VERSION=v0.146.0
+ARG ADAPTER_COMMIT=cf25d62d3f03b41a696ed3b82fa98e35ee188cf0
 ARG CLOUDFLARED_VERSION=2026.10.0
 
 # lncli for the lease's and recover-close's channel close (the stock binary of the LND release LND (Terminus) is
